@@ -11,6 +11,11 @@ QuantumLib is a Coq library for reasoning about quantum programs. It was co-deve
 ## Compilation
 
 Tested with Coq versions 8.12 -- 8.15.
+Experimental on 8.16
+
+This project requires `opam` & `dune` to be installed.
+
+Install `dune` using `opam install dune`
 
 To compile run `make all`.
 
@@ -18,7 +23,18 @@ Stable versions of QuantumLib may be installed using `opam install coq-quantumli
 
 ## Using With Other Projects
 
-To install QuantumLib, run `opam pin coq-quantumlib https://github.com/inQWIRE/QuantumLib.git`. This should allow you to import QuantumLib files into other Coq files. To pull subsequent updates, run `opam install coq-quantumlib`. When importing/exporting specific files, refer to QuantumLib files as `QuantumLib.FILENAME`.
+### Official Release
+
+To install the official release of QuantumLib, run the following.
+```
+opam repo add coq-released https://coq.inria.fr/opam/released
+opam update
+opam install coq-quantumlib
+```
+
+### Dev
+
+To install the development version of QuantumLib, run `opam pin coq-quantumlib https://github.com/inQWIRE/QuantumLib.git`. This should allow you to import QuantumLib files into other Coq files. To pull subsequent updates, run `opam install coq-quantumlib`. When importing/exporting specific files, refer to QuantumLib files as `QuantumLib.FILENAME`.
 
 ## Directory Contents
 
